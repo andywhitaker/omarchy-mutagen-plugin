@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "awhitaker.mutagen",
+  "name": "Mutagen",
+  "version": "1.0.0",
+  "author": "Andy Whitaker",
+  "license": "MIT",
+  "description": "Monitor and control Mutagen file synchronization and network forwarding sessions from the Omarchy bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Mutagen",
+    "description": "Monitor Mutagen sync sessions, conflicts, staging progress, and port forwards.",
+    "category": "Development",
+    "aliases": [
+      "mutagen",
+      "sync",
+      "filesync"
+    ],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 5,
+      "showSessionCount": true,
+      "showForwards": true,
+      "notifyOnIssues": true,
+      "hideWhenEmpty": false
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Refresh interval (seconds)",
+        "min": 2,
+        "max": 300,
+        "step": 1,
+        "defaultValue": 5
+      },
+      {
+        "key": "showSessionCount",
+        "type": "boolean",
+        "label": "Show session count in bar",
+        "defaultValue": true
+      },
+      {
+        "key": "showForwards",
+        "type": "boolean",
+        "label": "Show network forwarding sessions",
+        "defaultValue": true
+      },
+      {
+        "key": "notifyOnIssues",
+        "type": "boolean",
+        "label": "Notify on sync issues and conflicts",
+        "defaultValue": true
+      },
+      {
+        "key": "hideWhenEmpty",
+        "type": "boolean",
+        "label": "Dim widget when no sessions are active",
+        "defaultValue": false
+      }
+    ]
+  }
+}

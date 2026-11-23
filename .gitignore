@@ -1,0 +1,33 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# QML / Qt caches
+*.qmlc
+*.jsc
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*~
+*.patch
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.pid
+
+# Local tooling / agent scratch
+.gemini/
+.antigravity/
+scratch/
